@@ -1,0 +1,43 @@
+{
+  "name": "ionic-sql",
+  "version": "0.0.1",
+  "description": "Access SQLite databases on the device or browser",
+  "main": "./dist/ionicsql.js",
+  "module": "./dist/ionicsql.js",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build:src": "tsc -p .",
+    "build:lint": "tslint -c ./tslint.json --project ./tsconfig.json",
+    "build": "npm run clean && npm run build:lint && npm run build:src",
+    "doc": "jsdoc lib/ionicsql.js",
+    "preversion": "npm run build",
+    "postversion": "git push --follow-tags && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afranioce/ionic-sql.git"
+  },
+  "dependencies": {
+    "@angular/core": "~2.1.1",
+    "ionic-native": "~2.2.6",
+    "typescript": "^2.0.6"
+  },
+  "devDependencies": {
+    "jsdoc": "^3.4.3",
+    "tslint": "^3.10.2",
+    "tslint-ionic-rules": "0.0.8"
+  },
+  "keywords": [
+    "sql",
+    "sqlite",
+    "websql",
+    "storage"
+  ],
+  "author": "Afranio Martins",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/afranioce/ionic-sql/issues"
+  },
+  "homepage": "https://github.com/afranioce/ionic-sql#readme",
+  "typings": "./dist/ionicsql.d.ts"
+}

@@ -1,0 +1,21 @@
+# IDE generated files
+.idea
+# Node generated files
+node_modules
+npm-debug.log
+# OS generated files
+Thumbs.db
+.DS_Store
+
+# TypeScript source files, apart generated type definitions
+src
+
+# Other generated files
+*.spec.*
+*.map
+
+# Other build-related files
+.travis.yml
+karma.*
+tsconfig.*
+tslint.json
